@@ -1,9 +1,10 @@
 package _03_Observer;
 /*
-    Observer Pattern
-    - 어떤 객체의 상태가 변할때 그와 연관된 객체들에게 알림을 보내는 디자인 패턴
+ * Observer Pattern
+   - 어떤 객체의 상태가 변할 때 그와 연관된 객체들에게 알림을 보내는 디자인 패턴
  */
 public class T01_Observer {
+
 	public static void main(String[] args) {
 		Subject subject = new ConcreateSubject();
 		
@@ -15,7 +16,12 @@ public class T01_Observer {
 		subject.registerObserver(ob);
 		
 		subject.notifyObserver();
+		System.out.println("-----------------");
+		subject.notifyObserver();
 		
+		subject.removeObserver(oa);
+		System.out.println("-----------------");
 		
+		subject.notifyObserver();
 	}
 }
